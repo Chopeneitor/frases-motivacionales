@@ -1,12 +1,19 @@
-# Página Motivacional Interactiva
 
-Una página web simple con frases motivadoras y colores de fondo cambiantes.
+---
 
-## Cómo usarla con Docker
+## 🛠️ Requisitos
 
-1. Abre una terminal en esta carpeta.
-2. Escribe estos comandos:
+- [Docker](https://docs.docker.com/get-docker/) instalado
+- Acceso a terminal (Linux, macOS o WSL en Windows)
+- Puerto `3000` disponible
+- (Opcional) Si estás en la nube (AWS, GCP, etc.), asegúrate de permitir tráfico en el puerto `3000`
+
+---
+
+## 🚀 Cómo desplegar el servicio
+
+1. **Clona el repositorio:**
 
 ```bash
-docker build -t frases-motivacionales .
-docker run -d -p 8080:80 frases-motivacionales
+git clone https://github.com/tuusuario/frases-motivacionales.git
+cd frases-motivacionales
