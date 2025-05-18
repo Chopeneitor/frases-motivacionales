@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Página Interactiva - Frases Motivacionales</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 50px;
+      transition: background-color 0.3s;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      margin: 10px;
+      cursor: pointer;
+      border: none;
+      border-radius: 8px;
+      background-color: #0984e3;
+      color: white;
+    }
+    button:hover {
+      background-color: #74b9ff;
+    }
+    #frase {
+      font-size: 24px;
+      margin-top: 30px;
+      color: #2d3436;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Frases Motivacionales</h1>
+  <p>Haz clic para inspirarte:</p>
+
+  <button onclick="mostrarFrase()">Mostrar nueva frase</button>
+  <button onclick="cambiarColor()">Cambiar color de fondo</button>
+
+  <div id="frase">"La motivación te impulsa, el hábito te mantiene."</div>
+
+  <script>
+    const frases = [
+      "Cree en ti y todo será posible.",
+      "El éxito es la suma de pequeños esfuerzos repetidos cada día.",
+      "Nunca es tarde para ser quien podrías haber sido.",
+      "Tu única limitación es tu mente.",
+      "La disciplina es el puente entre metas y logros.",
+      "Haz hoy lo que otros no quieren, y mañana vivirás como otros no pueden.",
+      "Lo único imposible es aquello que no intentas."
+    ];
+
+    function mostrarFrase() {
+      const fraseAleatoria = frases[Math.floor(Math.random() * frases.length)];
+      document.getElementById("frase").textContent = fraseAleatoria;
+    }
+
+    function cambiarColor() {
+      const colores = ["#ffeaa7", "#fab1a0", "#b2bec3", "#a29bfe", "#81ecec", "#fdcb6e"];
+      const colorAleatorio = colores[Math.floor(Math.random() * colores.length)];
+      document.body.style.backgroundColor = colorAleatorio;
+    }
+  </script>
+
+</body>
+</html>
